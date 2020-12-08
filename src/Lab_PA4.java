@@ -98,6 +98,8 @@ public class Lab_PA4 extends JFrame
 	public static boolean attenuation = false;
 	public static boolean specular = true;
 	public static boolean diffuse = true;
+	public static int dx = 0;
+	public static int dy = 0;
     
 	public Lab_PA4()
 	{
@@ -313,6 +315,18 @@ public class Lab_PA4 extends JFrame
 	    		ns--;
 	        drawTestCase();
 	    	break;
+			case '[':
+				dx--;
+				break;
+			case ']':
+				dx++;
+				break;
+			case '(':
+				dy--;
+				break;
+			case ')':
+				dy++;
+				break;
 	    default :
 	        break;
 	    }

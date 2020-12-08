@@ -150,9 +150,9 @@ public class Cylinder3D
 			for(j=0; j < n-1; ++j)
 			{
 				// ****************Implement Code here*******************//
-				v0 = mesh.v[i][j];
-				v1 = mesh.v[i+1][j];
-				v2 = mesh.v[i+1][j+1];
+				v0 = mesh.v[i][j].plus(new Point3D(Lab_PA4.dx,Lab_PA4.dy,0));
+				v1 = mesh.v[i+1][j].plus(new Point3D(Lab_PA4.dx,Lab_PA4.dy,0));
+				v2 = mesh.v[i+1][j+1].plus(new Point3D(Lab_PA4.dx,Lab_PA4.dy,0));
 
 				triangle_normal = Lab_PA4.computeTriangleNormal(v0,v1,v2);
 
@@ -194,9 +194,9 @@ public class Cylinder3D
 				}
 
 				// ****************Implement Code here*******************//
-				v0 = mesh.v[i][j];
-				v1 = mesh.v[i+1][j+1];
-				v2 = mesh.v[i][j+1];
+				v0 = mesh.v[i][j].plus(new Point3D(Lab_PA4.dx,Lab_PA4.dy,0));
+				v1 = mesh.v[i+1][j+1].plus(new Point3D(Lab_PA4.dx,Lab_PA4.dy,0));
+				v2 = mesh.v[i][j+1].plus(new Point3D(Lab_PA4.dx,Lab_PA4.dy,0));
 
 				triangle_normal = Lab_PA4.computeTriangleNormal(v0,v1,v2);
 
